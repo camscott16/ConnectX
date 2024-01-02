@@ -63,7 +63,6 @@ public class ConnectXController {
         this.screen = view;
         this.numPlayers = np;
 
-        // Some code is needed here.
     }
 
     /**
@@ -79,7 +78,8 @@ public class ConnectXController {
      * game hitting any button ]
      */
     public void processButtonClick(int col) {
-        // Your code goes here.
+
+
     }
 
     /**
