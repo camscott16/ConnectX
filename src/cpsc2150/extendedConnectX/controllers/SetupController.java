@@ -9,30 +9,22 @@ import cpsc2150.extendedConnectX.views.*;
  * the number to win by the view, but it still needs to validate that input. If there are any
  * errors it can use the displayError method in the SetupView class to inform the player of the
  * error, then wait for them to fix it and resubmit.
- * <p>
  * If there are no errors it will create a new {@link IGameBoard} object (the implementation will depend on
  * the size of the game board) to serve as the model, and the {@link ConnectXController} and {@link ConnectXView}.
  * Control is then passed over the event dispatch thread that will wait for an event to occur
- * <p>
- * No changes need to be made to this class.
  * 
- * @version 2.0
  */
 public class SetupController {
 
     /**
-     * <p>
      * This stores the setup view associated with this controller.
-     * </p>
      */
     private SetupView view;
 
     /**
-     * <p>
      * Constants for minimum size, maximum size, minimum number of
      * tokens required to win and the board cutoff for automatically
      * choosing between Gameboard and GameboardMem.
-     * </p>
      */
     private final int MAX_SIZE = 20;
     private final int MIN_SIZE = 3;
@@ -40,9 +32,7 @@ public class SetupController {
     private final int BOARD_CUTOFF = 100;
 
     /**
-     * <p>
      * This creates a new setup controller.
-     * </p>
      *
      * @param v 
      *      The setup view associated with this controller.
@@ -52,9 +42,7 @@ public class SetupController {
     }
 
     /**
-     * <p>
      * This processes the submit button click.
-     * </p>
      * 
      * @param rows
      *      Number of rows for the board

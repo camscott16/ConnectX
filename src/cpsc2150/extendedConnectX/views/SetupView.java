@@ -10,11 +10,7 @@ import javax.swing.*;
  * This class contains the code to create and layout the GUI for the setup screen.
  * It also is the observer of the submit button. When someone clicks on submit
  * the action performed method is called, which then calls the controller Object.
- * <p>
- * You do not need to make any changes to this file, but it is a good example of
- * a Java swing GUI.
  * 
- * @version 2.0
  */
 public class SetupView extends JFrame implements ActionListener {
 
@@ -33,9 +29,7 @@ public class SetupView extends JFrame implements ActionListener {
     private SetupController controller;
 
     /**
-     * <p>
      * This creates a screen for setting up a new game.
-     * </p>
      * 
      * @post [ a functional screen with the options for a new game ]
      */
@@ -93,21 +87,14 @@ public class SetupView extends JFrame implements ActionListener {
 
         // Start the main application window --------------------------------
 
-        /*
-         * Make sure the main window is appropriately sized for the widgets in
-         * it, that it exits this program when closed, and that it becomes
-         * visible to the user now
-         */
         this.pack();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }
 
     /**
-     * <p>
      * This is the callback method that gets called as part of the 
      * observer pattern.
-     * </p> 
      * 
      * @param event 
      *      The event on the screen that is observed
@@ -178,9 +165,7 @@ public class SetupView extends JFrame implements ActionListener {
     }
 
     /**
-     * <p>
      * This method displays an error message on the screen.
-     * </p>
      * 
      * @param msg
      *      The message to display in our text area
@@ -192,10 +177,8 @@ public class SetupView extends JFrame implements ActionListener {
     }
 
     /**
-     * <p>
      * This method registers argument as observer/listener of this; this must be done first,
      * before any other methods of this class are called.
-     * </p>
      * 
      * @param c 
      *      Controller to register
@@ -208,9 +191,7 @@ public class SetupView extends JFrame implements ActionListener {
     }
 
     /**
-     * <p>
      * This method closes the screen by disposing it.
-     * </p>
      *
      * @post [ This screen is properly disposed ]
      */

@@ -14,10 +14,7 @@ import javax.swing.*;
  * the buttons will be arranged in a {@code ROWS_IN_BUTTON_PANEL x COLUMNS_IN_BUTTON_PANEL} Grid
  * Players will use another set of buttons above the grid to select the column to place in
  * All events will be passed to the controller
- * <p>
- * You do not need to make any changes to this code, but you do need to understand much of what is happening
  *
- * @version 2.0
  */
 public class ConnectXView extends JFrame implements ActionListener {
 
@@ -34,9 +31,7 @@ public class ConnectXView extends JFrame implements ActionListener {
     private float fontSize = 40;
 
     /**
-     * <p>
      * This creates a screen for playing the game.
-     * </p>
      * 
      * @param row the number of rows you want in the Extended ConnectX grid
      * @param col the number of columns you want in the Extended ConnectX grid
@@ -122,21 +117,14 @@ public class ConnectXView extends JFrame implements ActionListener {
 
         // Start the main application window --------------------------------
 
-        /*
-         * Make sure the main window is appropriately sized for the widgets in
-         * it, that it exits this program when closed, and that it becomes
-         * visible to the user now
-         */
         this.pack();
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
     }
 
     /**
-     * <p>
      * This method registers argument as observer/listener of this; this must be done first,
      * before any other methods of this class are called.
-     * </p>
      * 
      * @param c 
      *      Controller to register
@@ -149,10 +137,8 @@ public class ConnectXView extends JFrame implements ActionListener {
     }
 
     /**
-     * <p>
      * This is the callback method that gets called as part of the 
      * observer pattern.
-     * </p> 
      * 
      * @param event 
      *      The event on the screen that is observed
@@ -195,9 +181,7 @@ public class ConnectXView extends JFrame implements ActionListener {
     }
 
     /**
-     * <p>
      * This method displays a message on the screen.
-     * </p>
      * 
      * @param m
      *      The message to display in our text area
@@ -209,9 +193,7 @@ public class ConnectXView extends JFrame implements ActionListener {
     }
 
     /**
-     * <p>
      * This method displays a player token on the screen.
-     * </p>
      * 
      * @param row
      *      The row of the button in our grid
