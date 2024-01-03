@@ -44,6 +44,10 @@ public class ConnectXController {
      */
     private int numPlayers;
 
+    private int curPlayer;
+
+    private char[] playerTokens = {'X', 'O', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'};
+
     /**
      * <p>
      * This creates a controller for running the Extended ConnectX game
@@ -78,7 +82,50 @@ public class ConnectXController {
      * game hitting any button ]
      */
     public void processButtonClick(int col) {
+        if(curGame.checkForWin(col))
+        {
+            newGame();
+            return;
+        }
+        // Checks for tie
+        if(curGame.checkTie())
+        {
+            newGame();
+            return;
+        }
+        // Prompt current player to move
+        screen.setMessage("Player " + playerTokens[(curPlayer+1)%numPlayers] + ", it is your turn");
+        if(!curGame.checkIfFree(col)){
+            screen.setMessage("Pick a different column.");
+        }
+        // Actual placing code
+        else if(curGame.checkIfFree(col) && !curGame.checkForWin(col) )
+        {
+            // loop that handles finding the correct row position
+            int r = -1;
+            for(int i = 0; i < curGame.getNumRows() && r == -1; i++) {
+                BoardPosition pos = new BoardPosition(i, col);
+                if(curGame.whatsAtPos(pos) == ' ')
+                    r = i;
 
+            }
+
+            // places token on model and view
+            curGame.dropToken(playerTokens[curPlayer%numPlayers], col);
+            screen.setMarker(r, col, playerTokens[curPlayer%numPlayers]);
+            curPlayer++;
+        }
+        // Checks tie condition
+        if(curGame.checkTie())
+        {
+            screen.setMessage("You Tied. Click any button for a new game.");
+        }
+        // checks for win condition
+        if(curGame.checkForWin(col))
+        {
+            curPlayer--; // decrements current player
+            screen.setMessage("Player " + playerTokens[curPlayer % numPlayers] + " Wins! Click any Button to start a new game");
+        }
 
     }
 
