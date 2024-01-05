@@ -22,6 +22,8 @@ Scalable Java Connect 4 Game with enhanced user experience
 
 ## Key Features
     - Utilizes the Model-View-Controller (MVC) pattern for better code organization.
+    - Utilizes the concept of "Coding to the interface" for improved flexibility within the codebase.
+    - Implementations tested thoroughly using the JUnit testing framework. 
     - Implements a user-friendly graphical interface using Java Swing.
     - Validates player moves, tracks game status, and detects wins or ties. 
 
